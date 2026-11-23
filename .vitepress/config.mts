@@ -14,8 +14,8 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }],
   ],
-  title: "GTC docs",
-  description: "Gtc usage",
+  title: "gtc 文档",
+  description: "gtc 命令使用说明",
   outDir: "./dist",
   vite: {
     plugins: [VitePWA(pwaConfig)],
@@ -24,8 +24,8 @@ export default defineConfig({
     root: {
       label: "简体中文",
       lang: "zh-CN",
-      title: "SITE_TITLE",
-      description: "SITE_DESCRIPTION",
+      title: "gtc 文档",
+      description: "gtc 命令使用说明",
       themeConfig: {
         logo: "/favicon.svg",
         lastUpdated: {
@@ -41,16 +41,12 @@ export default defineConfig({
         },
         nav: [
           { text: "首页", link: "/" },
-          { text: "组件", link: "/posts/components/index.md" },
-          { text: "Utils", link: "/posts/utils/index.md" },
-          { text: "规范", link: "/posts/standard/index.md" },
-          { text: "事故", link: "/posts/incidents/index.md" },
+          { text: "命令使用", link: "/guide/index.md" },
         ],
         sidebar: generateSidebar({
           documentRootPath: "src",
-          scanStartPath: "/posts",
+          scanStartPath: "/guide",
           collapsed: false,
-          capitalizeFirst: true,
           useTitleFromFileHeading: true,
           useTitleFromFrontmatter: true,
           hyphenToSpace: true,
@@ -83,71 +79,6 @@ export default defineConfig({
         footer: {
           message: "基于 MIT 许可发布",
           copyright: "Copyright © 2019-present aric.zheng",
-        },
-      },
-    },
-    en: {
-      label: "English",
-      lang: "en",
-      title: "SITE_TITLE",
-      description: "SITE_DESCRIPTION",
-      themeConfig: {
-        logo: "/favicon.svg",
-        lastUpdated: {
-          text: "Last updated",
-        },
-        docFooter: {
-          prev: "Previous",
-          next: "Next",
-        },
-        outline: {
-          label: "On this page",
-          level: [2, 3],
-        },
-        nav: [
-          { text: "Home", link: "/en/" },
-          { text: "Components", link: "/en/posts/components/index.md" },
-          { text: "Utils", link: "/en/posts/utils/index.md" },
-          { text: "Standard", link: "/en/posts/standard/index.md" },
-          { text: "Incidents", link: "/en/posts/incidents/index.md" },
-        ],
-        sidebar: generateSidebar({
-          documentRootPath: "src/en",
-          scanStartPath: "/posts",
-          collapsed: false,
-          capitalizeFirst: true,
-          useTitleFromFileHeading: true,
-          useTitleFromFrontmatter: true,
-          hyphenToSpace: true,
-          excludePattern: ["README.md"],
-          debugPrint: false,
-        }),
-        search: {
-          provider: "local",
-          options: {
-            translations: {
-              button: {
-                buttonText: "Search",
-                buttonAriaLabel: "Search documentation",
-              },
-              modal: {
-                noResultsText: "No results for",
-                resetButtonTitle: "Reset search",
-                footer: {
-                  selectText: "to select",
-                  navigateText: "to navigate",
-                  closeText: "to close",
-                },
-              },
-            },
-          },
-        },
-        socialLinks: [
-          { icon: "github", link: "https://github.com/GITHUB_USERNAME" },
-        ],
-        footer: {
-          message: "Released under the MIT License.",
-          copyright: "Copyright © 2019-present AUTHOR_NAME",
         },
       },
     },

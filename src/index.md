@@ -2,24 +2,24 @@
 layout: home
 
 hero:
-  name: 'GTC docs'
-  text: 'Gtc usage'
+  name: 'gtc 文档'
+  text: 'Github / GitLab 发布触发与回滚命令行工具'
   actions:
     - theme: brand
       text: 开始使用
-      link: /posts/standard/index.md
+      link: /guide/index.md
     - theme: alt
       text: Github 主页
       link: https://github.com/afeiship
 
 features:
-  - icon: 🎣
-    title: React Hooks
-    details: 丰富的自定义 Hooks 集合，涵盖状态管理、副作用、DOM 操作等常见场景
-  - icon: 🛠️
-    title: 工具函数
-    details: 实用的 JavaScript 工具函数，包括字符串、对象、数组、时间等常用操作
-  - icon: 📚
-    title: 开发规范
-    details: 项目开发规范和最佳实践，包括 React 编码规范、Git 工作流、GitHub 协作规范等
+  - icon: 🚀
+    title: 一键发布
+    details: 交互菜单选择目标环境，触发 beta / production 流水线
+  - icon: ↩️
+    title: 快速回滚
+    details: 从历史成功发布记录中选择版本回滚，支持旧 commit 重建
+  - icon: ⚙️
+    title: 配置驱动
+    details: 通过项目根目录的 .gtc.config.yml 管理环境列表与 GitLab 信息
 ---
