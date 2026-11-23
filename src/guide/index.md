@@ -2,6 +2,43 @@
 
 `gtc` 是一个 Github / GitLab 发布流水线触发与回滚的命令行工具：通过交互菜单选择目标环境，触发对应流水线；发布出现问题时，可回滚到历史成功发布的版本。
 
+## 安装与升级
+
+### 安装
+
+通过 Homebrew 安装（macOS）：
+
+```shell
+brew install afeiship/jswork/gtc
+```
+
+### 升级
+
+先刷新 tap 公式，再升级：
+
+```shell
+brew update
+brew upgrade gtc
+```
+
+如果 tap 本地缓存未更新导致升级不生效，可删除旧 tap 后重新安装（按芯片选择路径）：
+
+```shell
+# Intel 芯片
+rm -rf /usr/local/Homebrew/Library/Taps/afeiship/homebrew-jswork
+
+# Apple Silicon 芯片
+rm -rf /opt/homebrew/Library/Taps/afeiship/homebrew-jswork
+
+brew install afeiship/jswork/gtc
+```
+
+安装或升级后可查看版本确认：
+
+```shell
+gtc -v
+```
+
 ## 快速开始
 
 ```shell
