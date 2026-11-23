@@ -17,5 +17,12 @@
     "vitepress-sidebar": "^1.33.1",
     "vue": "^3.5.27",
     "workbox-window": "^7.4.0"
-  }
+  },
+  "keywords": [
+    "vitepress",
+    "documentation",
+    "gtc",
+    "pwa",
+    "chinese"
+  ]
 }
